@@ -1,0 +1,130 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* STYLE DU BODY */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* CONTENEUR PRINCIPAL */
+  .container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Animation fadeIn */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* TITRE */
+  h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* MESSAGE */
+  .message {
+    margin-bottom: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* FORMULAIRE */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+  
+  /* GROUPES DE CHAMPS */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="file"],
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* BOUTONS */
+  .button-group {
+    text-align: center;
+  }
+  .btn-submit {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-submit:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  .btn-submit:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  /* LIEN DE RETOUR */
+  .back-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .back-link .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e67e22;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .back-link .btn:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+  }
+  .back-link .btn:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  

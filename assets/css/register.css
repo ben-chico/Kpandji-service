@@ -1,0 +1,186 @@
+/* RESET DE BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLE DU BODY : fond en dégradé et centrage */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEUR PRINCIPAL */
+.container {
+  background-color: #ffffffcc; /* blanc semi-transparent */
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 30px;
+  width: 400px;          /* largeur réduite */
+  max-width: 95%;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* ANIMATION FADE IN */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* TITRE */
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+/* MESSAGE (erreur ou succès) */
+#message {
+  color: green;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* FORMULAIRE EN GRID pour le multi-step */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Chaque ligne de formulaire */
+.form-row {
+  display: contents;  /* permet aux enfants (form-group) de s'aligner dans la grille */
+}
+
+/* Groupe de champs (label + input) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pour les éléments devant occuper deux colonnes */
+.full-width {
+  grid-column: span 2;
+}
+
+/* LABELS */
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* CHAMPS DE FORMULAIRE */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+/* Effet focus sur les champs */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #7f5af0;
+  outline: none;
+}
+
+/* BOUTON DE SOUMISSION */
+.full-width input[type="submit"] {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 5px;
+}
+.full-width input[type="submit"]:hover {
+  background: #5f3bc2;
+}
+.full-width input[type="submit"]:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* GESTION DES BOUTONS DE NAVIGATION (pagination) */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  grid-column: span 2;
+  margin-top: 20px;
+}
+.button-group button {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.button-group button:hover {
+  background: #5f3bc2;
+}
+.button-group button:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* LIENS */
+.container a {
+  color: #7f5af0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.container a:hover {
+  color: #5f3bc2;
+  text-decoration: underline;
+}
+
+/* PARAGRAPHES */
+.container p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* STYLE DES ÉTAPES DU FORMULAIRE */
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: block;
+}
+
+/* Animation pour le bloc prénom */
+#div_prenom {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+.hide {
+  max-height: 0;
+  opacity: 0;
+}
+.show {
+  max-height: 100px; /* Ajustez selon la hauteur réelle de votre contenu */
+  opacity: 1;
+}
+

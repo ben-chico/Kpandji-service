@@ -1,0 +1,112 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* STYLE DU BODY : fond en dégradé léger */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* dégradé bleu clair */
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* CONTENEUR PRINCIPAL */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* TITRE */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* MESSAGE pour panier vide */
+  .empty-msg {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #e74c3c;
+    margin: 30px 0;
+  }
+  
+  /* STYLE DE LA TABLE */
+  .cart-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-table th, .cart-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-table thead {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .cart-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* SECTION TOTAL */
+  .total-section {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .total-section p {
+    font-size: 1.2rem;
+    color: #27ae60;
+  }
+  
+  /* BOUTON DE SOUMISSION */
+  .btn-submit {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+  }
+  
+  .btn-submit:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-submit:active {
+    transform: scale(0.98);
+  }
+  
+  /* LIEN DE RETOUR */
+  .back-link {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .back-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .back-link a:hover {
+    color: #2980b9;
+  }
+  

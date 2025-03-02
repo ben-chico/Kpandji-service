@@ -1,0 +1,123 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* STYLE DU BODY */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* CONTENEUR PRINCIPAL */
+  .container {
+    background-color: #ffffffcc; /* blanc semi-transparent */
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 30px;
+    width: 350px;
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* ANIMATION FADE IN */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* TITRE */
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.6rem;
+  }
+  
+  /* MESSAGE (erreur, succès) */
+  #message {
+    color: #e74c3c; /* rouge */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* LABELS */
+  .container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  /* CHAMPS DE FORMULAIRE */
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="password"],
+  .container input[type="number"],
+  .container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  /* FOCUS */
+  .container input:focus,
+  .container select:focus {
+    border-color: #7f5af0;
+    outline: none;
+  }
+  
+  /* BOUTON DE SOUMISSION */
+  .container input[type="submit"] {
+    width: 100%;
+    background: #7f5af0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 5px;
+  }
+  
+  .container input[type="submit"]:hover {
+    background: #5f3bc2;
+  }
+  
+  .container input[type="submit"]:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  /* LIENS */
+  .container a {
+    color: #7f5af0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .container a:hover {
+    color: #5f3bc2;
+    text-decoration: underline;
+  }
+  
+  /* PARAGRAPHES */
+  .container p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  

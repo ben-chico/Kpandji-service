@@ -1,0 +1,143 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* STYLE DU BODY : fond en dégradé léger */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* CONTENEUR PRINCIPAL */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* TITRE */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* GRILLE DES CARTES */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* STYLE DES CARTES */
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  /* IMAGE de la carte */
+  .card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  /* CONTENU DE LA CARTE */
+  .card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  .card-content .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #27ae60;
+  }
+  .card-content .description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* FORMULAIRE D'AJOUT AU PANIER */
+  .card-content form {
+    margin-bottom: 15px;
+  }
+  .card-content label {
+    font-size: 0.9rem;
+    margin-right: 5px;
+  }
+  .card-content input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .card-content input[type="submit"].btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .card-content input[type="submit"].btn:hover {
+    background: #2980b9;
+  }
+  
+  /* BOUTON "AVIS" */
+  .btn.review-btn {
+    display: inline-block;
+    text-align: center;
+    background: #e67e22;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .btn.review-btn:hover {
+    background: #d35400;
+  }
+  
+  /* LIEN DE RETOUR */
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .back-link:hover {
+    color: #2980b9;
+  }
+  

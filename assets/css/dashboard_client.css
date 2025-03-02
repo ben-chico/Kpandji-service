@@ -1,0 +1,129 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* STYLE DU BODY : fond en dégradé neutre */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);  /* dégradé bleu clair */
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* CONTENEUR PRINCIPAL */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* TITRES */
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* GRILLE POUR LES CARTES DE RESTAURANTS */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* STYLE DES CARTES */
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  /* Informations dans la carte */
+  .card p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .card strong {
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  /* Bouton "Voir le menu" */
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;
+  }
+  .btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* LIEN DE DÉCONNEXION */
+  .logout {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .logout:hover {
+    color: #2980b9;
+  }
+  
+  /* STYLE DES CARTES DE COMMANDES */
+  .order-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .order-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .order-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  .order-card a:hover {
+    color: #2980b9;
+  }
+  
